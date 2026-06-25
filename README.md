@@ -1,74 +1,72 @@
-# Simple Interest Calculator
+# JavaScript Projects Collection
 
-A modern and responsive web-based **Simple Interest Calculator** built using **HTML, CSS, and JavaScript**. The application helps users calculate the interest earned on an investment and the final amount receivable after a specified number of years.
+A collection of beginner-friendly web development projects built using **HTML, CSS, and JavaScript**. These projects were created to practice front-end development, responsive design, and JavaScript fundamentals.
 
-## Live Demo
+## Projects
 
-🔗 **Live View:** ()
+### Unit Converter
+A modern unit conversion application featuring:
 
-## Features
+- Temperature conversions (Celsius, Fahrenheit, Kelvin)
+- Weight conversions (Kilograms, Pounds, Grams, Ounces)
+- Distance conversions (Kilometers, Miles, Meters, Feet)
+- Real-time conversion results
+- Responsive user interface
 
-* Calculate Simple Interest instantly
-* Modern and responsive user interface
-* Dynamic interest rate display
-* Input validation
-* Investment summary display
-* Clear form functionality
-* Smooth hover animations
-* Mobile-friendly design
+### To-Do List
+A simple task management application that allows users to:
 
-## Built With
+- Add new tasks
+- Mark tasks as completed
+- Delete tasks
+- Organize daily activities
+- Stay productive with a clean interface
 
-* HTML5
-* CSS3
-* JavaScript (Vanilla JS)
+### Simple Interest Calculator
+A basic financial calculator that helps users:
 
-## How It Works
+- Calculate simple interest
+- Enter principal, rate, and time
+- View results instantly
+- Understand simple interest calculations
 
-The calculator uses the Simple Interest formula:
+## Technologies Used
 
-**Simple Interest**
+- HTML5
+- CSS3
+- JavaScript (ES6)
 
-```text
-SI = (P × R × T) / 100
-```
-
-Where:
-
-* P = Principal Amount
-* R = Annual Interest Rate
-* T = Time (Years)
-
-**Total Amount**
+## Repository Structure
 
 ```text
-Amount = Principal + Interest
+JavaScript-Projects/
+├── Unit-Converter/
+├── To-Do-List/
+└── Simple-Interest-Calculator/
 ```
 
-## Project Structure
+## Learning Objectives
 
-```text
-simple-interest-calculator/
-│
-├── index.html
-├── style.css
-├── script.js
-├── screenshot.png
-└── README.md
-```
+These projects helped me practice:
 
-## Future Enhancements
+- Responsive Web Design
+- JavaScript Fundamentals
+- DOM Manipulation
+- Event Handling
+- Form Validation
+- UI/UX Design
+- Git & GitHub Workflow
 
-* Interest rate slider
-* Dark mode
-* Compound interest calculator
-* Currency selection
-* PDF report generation
-* Calculation history
+## Future Improvements
+
+- Deploy all projects using GitHub Pages
+- Add dark mode support
+- Enhance accessibility
+- Build more JavaScript projects
 
 ## Author
 
 **Maha Abdul Mukhtar**
 
-GitHub: https://github.com/MahaAbdulMukhtar
-
+---
+Feel free to explore the projects and provide feedback!
