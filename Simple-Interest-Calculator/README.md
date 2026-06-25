@@ -3,8 +3,7 @@
 A modern and responsive web-based **Simple Interest Calculator** built using **HTML, CSS, and JavaScript**. The application helps users calculate the interest earned on an investment and the final amount receivable after a specified number of years.
 
 ## Live Demo
-
-🔗 **Live View:** ()
+[View Live](https://mahaabdulmukhtar.github.io/JavaScript-Projects/Simple-Interest-Calculator/)
 
 ## Features
 
