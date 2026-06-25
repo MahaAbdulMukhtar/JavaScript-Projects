@@ -5,7 +5,7 @@ A clean, responsive to-do list web app built with vanilla HTML, CSS, and JavaScr
 ---
 
 ## Live Preview
-[View Live]()
+[View Live](https://mahaabdulmukhtar.github.io/JavaScript-Projects/To-Do-List/)
 
 ---
 
