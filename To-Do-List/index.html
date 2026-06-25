@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasky</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="logo">Task<span>y</span></div>
+            <button class="theme-btn" id="themeBtn">
+            <i class="fa-solid fa-moon"></i> Dark Mode
+            </button>
+        </div>
+            
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <h2 class="stat-num" id="totalTasks">0</h2>
+                <p class="stat-label">Total Tasks</p>
+            </div>
+
+            <div class="stat-card green">
+                <h2 class="stat-num" id="completedTasks">0</h2>
+                <p class="stat-label">Completed</p>
+            </div>
+
+            <div class="stat-card amber">
+                <h2 class="stat-num" id="pendingTasks">0</h2>
+                <p class="stat-label">Pending</p>
+            </div>
+        </div>
+
+
+        <!-- Progress -->
+        <div class="progress-wrap">
+            <div class="progress-top">
+                <span class="progress-label">Completion Progress</span>
+                <span class="progress-pct" id="progressPct">0%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Input Card -->
+        <div class="input-card">
+            <div class="search-wrap">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" id="searchTask" placeholder="Search tasks..." oninput="filterBySearch()"/>
+            </div>
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <div class="row">
+                <input type="date" id="dueDate">
+                <select id="priority">
+                    <option value="High">🔴 High</option>
+                    <option value="Medium">🟡 Medium</option>
+                    <option value="Low">🟢 Low</option>
+                </select>
+                <button class="add-btn" onclick="addTask()">
+                + Add Task
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+            <button class="filter-btn" onclick="setFilter('active', this)">Active</button>
+            <button class="filter-btn" onclick="setFilter('completed', this)">Completed</button>
+            <button class="clear-btn" onclick="clearAll()">
+            Clear All
+            </button>
+        </div>
+
+        <!-- Empty State -->
+        <div class="emptyState" id="emptyState">
+            <p class="empty-icon"><i class="fa-solid fa-clipboard-list"></i></p>
+            <p>No tasks yet - add one above!</p>
+        </div>
+
+        <!-- Task List -->
+        <ul class="task-list" id="todoList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

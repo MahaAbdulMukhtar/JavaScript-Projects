@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="home">
+        <div class="header-inner">
+            <h1 class="title">Unit Conversions</h1>
+
+            <nav class="tab-nav" aria-label="Converter sections">
+                <button class="tab active" data-type="temp" onclick="switchTab('temp')"><i class="fa-solid fa-temperature-half"></i> Temperature</button>
+                <button class="tab" data-type="weight" onclick="switchTab('weight')"><i class="fa-solid fa-weight-scale"></i> Weight</button>
+                <button class="tab" data-type="dist" onclick="switchTab('dist')"><i class="fa-solid fa-ruler"></i> Distance</button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="all-conversion-sections">
+
+        <!-- Temperature -->
+        <section id="temperature" class="panel active" data-type="temp" aria-label="Temperature converter">
+        <div class="card">
+            <div class="icon-row">
+                <div class="icon-badge temp-accent">🌡</div>
+                <div>
+                    <h2 class="card-title">Temperature</h2>
+                    <p class="card-subtitle">Celsius · Fahrenheit · Kelvin</p>
+                </div>
+            </div>
+            <div class="mode-btns" id="mode-temp">
+                <button class="mode-btn active" id="btn-cf" onclick="setTempMode('cf')">°C → °F</button>
+                <button class="mode-btn" id="btn-fc" onclick="setTempMode('fc')">°F → °C</button>
+                <button class="mode-btn" id="btn-ck" onclick="setTempMode('ck')">°C → K</button>
+                <button class="mode-btn" id="btn-kc" onclick="setTempMode('kc')">K → °C</button>
+            </div>
+            <div class="converter">
+                <div class="field">
+                    <label id="tlbl1" for="t-from">Celsius (°C)</label>
+                    <input type="number" id="t-from" placeholder="0" oninput="convertTemp()" autocomplete="off">
+                </div>
+                <button class="swap-btn" onclick="swapTemp()" title="Swap units" aria-label="Swap units">⇄</button>
+                <div class="field">
+                    <label id="tlbl2" for="t-to">Fahrenheit (°F)</label>
+                    <input type="number" id="t-to" placeholder="—" readonly class="output">
+                </div>
+            </div>
+            <aside class="formula-box">
+                <strong id="t-formula">°F = (°C × 9/5) + 32</strong>
+                <span id="t-plain">Enter a value above to see the result.</span>
+            </aside>
+        </div>
+        </section>
+
+        <!-- Weight -->
+        <section id="weight" class="panel" data-type="weight" aria-label="Weight converter">
+            <div class="card">
+                <div class="icon-row">
+                    <div class="icon-badge weight-accent">⚖</div>
+                    <div>
+                        <h2 class="card-title">Weight</h2>
+                        <p class="card-subtitle">Kilograms · Pounds · Grams · Ounces</p>
+                    </div>
+                </div>
+                <div class="mode-btns" id="mode-weight">
+                    <button class="mode-btn active" id="btn-kglb" onclick="setWeightMode('kglb')">kg → lb</button>
+                    <button class="mode-btn" id="btn-lbkg" onclick="setWeightMode('lbkg')">lb → kg</button>
+                    <button class="mode-btn" id="btn-goz" onclick="setWeightMode('goz')">g → oz</button>
+                    <button class="mode-btn" id="btn-ozg" onclick="setWeightMode('ozg')">oz → g</button>
+                </div>
+                <div class="converter">
+                    <div class="field">
+                        <label id="wlbl1" for="w-from">Kilograms (kg)</label>
+                        <input type="number" id="w-from" placeholder="0" oninput="convertWeight()" autocomplete="off">
+                    </div>
+                    <button class="swap-btn" onclick="swapWeight()" title="Swap units"
+                        aria-label="Swap units">⇄</button>
+                    <div class="field">
+                        <label id="wlbl2" for="w-to">Pounds (lb)</label>
+                        <input type="number" id="w-to" placeholder="—" readonly class="output">
+                    </div>
+                </div>
+                <aside class="formula-box">
+                    <strong id="w-formula">lb = kg × 2.20462</strong>
+                    <span id="w-plain">Enter a value above to see the result.</span>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Distance -->
+        <section id="distance" class="panel" data-type="dist" aria-label="Distance converter">
+            <div class="card">
+                <div class="icon-row">
+                    <div class="icon-badge dist-accent">📏</div>
+                    <div>
+                        <h2 class="card-title">Distance</h2>
+                        <p class="card-subtitle">Kilometers · Miles · Meters · Feet</p>
+                    </div>
+                </div>
+                <div class="mode-btns" id="mode-dist">
+                    <button class="mode-btn active" id="btn-kmmi" onclick="setDistMode('kmmi')">km → mi</button>
+                    <button class="mode-btn" id="btn-mikm" onclick="setDistMode('mikm')">mi → km</button>
+                    <button class="mode-btn" id="btn-mft" onclick="setDistMode('mft')">m → ft</button>
+                    <button class="mode-btn" id="btn-ftm" onclick="setDistMode('ftm')">ft → m</button>
+                </div>
+                <div class="converter">
+                    <div class="field">
+                        <label id="dlbl1" for="d-from">Kilometers (km)</label>
+                        <input type="number" id="d-from" placeholder="0" oninput="convertDist()" autocomplete="off">
+                    </div>
+                    <button class="swap-btn" onclick="swapDist()" title="Swap units" aria-label="Swap units">⇄</button>
+                    <div class="field">
+                        <label id="dlbl2" for="d-to">Miles (mi)</label>
+                        <input type="number" id="d-to" placeholder="—" readonly class="output">
+                    </div>
+                </div>
+                <aside class="formula-box">
+                    <strong id="d-formula">mi = km ÷ 1.60934</strong>
+                    <span id="d-plain">Enter a value above to see the result.</span>
+                </aside>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="#home" class="go-home" aria-label="Back to top">↑</a>
+
+    <footer>
+        <p>&#169; 2026 Maha. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
