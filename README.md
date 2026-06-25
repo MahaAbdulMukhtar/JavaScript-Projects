@@ -4,6 +4,12 @@ A collection of beginner-friendly web development projects built using **HTML, C
 
 ## Projects
 
+[Tasky](https://mahaabdulmukhtar.github.io/JavaScript-Projects/To-Do-List/)
+
+[Unit Converter](https://mahaabdulmukhtar.github.io/JavaScript-Projects/Unit-Conversion/)
+
+[Interest Calculator](https://mahaabdulmukhtar.github.io/JavaScript-Projects/Simple-Interest-Calculator/)
+
 ### Unit Converter
 A modern unit conversion application featuring:
 
